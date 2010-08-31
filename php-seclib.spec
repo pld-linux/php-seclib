@@ -3,7 +3,7 @@
 #   http://phpseclib.sourceforge.net/pear.htm
 #   pear remote-list -c phpseclib
 %define		subver	a
-%define		rel		0.1
+%define		rel		1
 %define		pkgname	seclib
 %define		php_min_version 5.2.0
 %include	/usr/lib/rpm/macros.php
