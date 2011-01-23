@@ -19,6 +19,7 @@ URL:		http://phpseclib.sourceforge.net/
 BuildRequires:	php-pear-PEAR
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
 BuildRequires:	rpmbuild(macros) >= 1.553
+BuildRequires:	unzip
 Patch0:		includes.patch
 Requires:	php-bcmath
 Requires:	php-common >= 4:%{php_min_version}
