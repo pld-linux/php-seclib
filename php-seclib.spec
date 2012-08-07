@@ -3,7 +3,7 @@
 #   http://phpseclib.sourceforge.net/pear.htm
 #   pear remote-list -c phpseclib
 %define		subver	a
-%define		rel		1
+%define		rel		2
 %define		pkgname	seclib
 %define		php_min_version 5.2.0
 %include	/usr/lib/rpm/macros.php
@@ -13,7 +13,7 @@ Version:	0.2.1
 Release:	0.%{subver}.%{rel}
 License:	LGPL
 Group:		Development/Languages/PHP
-Source0:	http://downloads.sourceforge.net/project/phpseclib/phpseclib%{version}%{subver}.zip
+Source0:	http://downloads.sourceforge.net/phpseclib/phpseclib%{version}%{subver}.zip
 # Source0-md5:	028be0414123f4bff61f1b2b4fd68fab
 URL:		http://phpseclib.sourceforge.net/
 BuildRequires:	php-pear-PEAR
@@ -21,14 +21,14 @@ BuildRequires:	rpm-php-pearprov >= 4.4.2-11
 BuildRequires:	rpmbuild(macros) >= 1.553
 BuildRequires:	unzip
 Patch0:		includes.patch
-Requires:	php-bcmath
+Requires:	php(bcmath)
+Requires:	php(hash)
+Requires:	php(openssl)
+Requires:	php(pcre)
+Requires:	php(xml)
 Requires:	php-common >= 4:%{php_min_version}
 Requires:	php-date
-Requires:	php-hash
-Requires:	php-openssl
-Requires:	php-pcre
 Requires:	php-pear
-Requires:	php-xml
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
