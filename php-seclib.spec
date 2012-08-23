@@ -3,7 +3,7 @@
 #   http://phpseclib.sourceforge.net/pear.htm
 #   pear remote-list -c phpseclib
 %define		subver	a
-%define		rel		2
+%define		rel		3
 %define		pkgname	seclib
 %define		php_min_version 5.2.0
 %include	/usr/lib/rpm/macros.php
@@ -22,11 +22,11 @@ BuildRequires:	rpmbuild(macros) >= 1.553
 BuildRequires:	unzip
 Patch0:		includes.patch
 Requires:	php(bcmath)
+Requires:	php(core) >= %{php_min_version}
 Requires:	php(hash)
 Requires:	php(openssl)
 Requires:	php(pcre)
 Requires:	php(xml)
-Requires:	php-common >= 4:%{php_min_version}
 Requires:	php-date
 Requires:	php-pear
 BuildArch:	noarch
