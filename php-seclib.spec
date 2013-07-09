@@ -3,6 +3,7 @@
 #   http://phpseclib.sourceforge.net/pear.htm
 #   pear remote-list -c phpseclib
 #   this way it won't file-conflict with PEAR packages
+# - patch location of CRYPT_RSA_OPENSSL_CONFIG (currently not installed)
 %define		pkgname	seclib
 %define		php_min_version 5.2.0
 %include	/usr/lib/rpm/macros.php
