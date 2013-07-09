@@ -1,22 +1,63 @@
---- php-seclib-0.2.1/Crypt/TripleDES.php~	2010-02-25 22:40:26.000000000 +0200
-+++ php-seclib-0.2.1/Crypt/TripleDES.php	2010-08-31 09:54:45.919440789 +0300
-@@ -54,7 +54,7 @@
- /**
+--- php-seclib-0.3.5/Crypt/TripleDES.php~	2013-07-09 09:59:43.969186930 +0300
++++ php-seclib-0.3.5/Crypt/TripleDES.php	2013-07-09 10:00:41.654938715 +0300
+@@ -57,7 +57,7 @@
   * Include Crypt_DES
   */
--require_once 'DES.php';
-+require_once 'Crypt/DES.php';
+ if (!class_exists('Crypt_DES')) {
+-    require_once('DES.php');
++    require_once 'Crypt/DES.php';
+ }
  
  /**
-  * Encrypt / decrypt using inner chaining
---- php-seclib-0.2.1/Crypt/AES.php~	2010-02-09 01:10:26.000000000 +0200
-+++ php-seclib-0.2.1/Crypt/AES.php	2010-08-31 09:56:04.703391530 +0300
-@@ -63,7 +63,7 @@
- /**
+--- php-seclib-0.3.5/Crypt/AES.php~	2013-07-09 09:59:43.959187088 +0300
++++ php-seclib-0.3.5/Crypt/AES.php	2013-07-09 10:01:25.154248818 +0300
+@@ -66,7 +66,7 @@
   * Include Crypt_Rijndael
   */
--require_once 'Rijndael.php';
-+require_once 'Crypt/Rijndael.php';
+ if (!class_exists('Crypt_Rijndael')) {
+-    require_once 'Rijndael.php';
++    require_once 'Crypt/Rijndael.php';
+ }
  
  /**#@+
-  * @access public
+--- php-seclib-0.3.5/File/X509.php~	2013-07-09 10:10:56.128526606 +0300
++++ php-seclib-0.3.5/File/X509.php	2013-07-09 10:18:52.044324034 +0300
+@@ -47,7 +47,7 @@
+  * Include File_ASN1
+  */
+ if (!class_exists('File_ASN1')) {
+-    require_once('ASN1.php');
++    require_once('File/ASN1.php');
+ }
+ 
+ /**
+--- php-seclib-0.3.5/Crypt/RSA.php~	2013-07-09 10:10:56.118526764 +0300
++++ php-seclib-0.3.5/Crypt/RSA.php	2013-07-09 10:19:47.630110406 +0300
+@@ -76,14 +76,14 @@
+ // call function_exists() a second time to stop the require_once from being called outside
+ // of the auto loader
+ if (!function_exists('crypt_random_string')) {
+-    require_once('Random.php');
++    require_once('Crypt/Random.php');
+ }
+ 
+ /**
+  * Include Crypt_Hash
+  */
+ if (!class_exists('Crypt_Hash')) {
+-    require_once('Hash.php');
++    require_once('Crypt/Hash.php');
+ }
+ 
+ /**#@+
+--- php-seclib-0.3.5/Net/SFTP.php~	2013-07-09 10:10:56.135193167 +0300
++++ php-seclib-0.3.5/Net/SFTP.php	2013-07-09 10:20:32.236070644 +0300
+@@ -58,7 +58,7 @@
+  * Include Net_SSH2
+  */
+ if (!class_exists('Net_SSH2')) {
+-    require_once('SSH2.php');
++    require_once('Net/SSH2.php');
+ }
+ 
+ /**#@+
