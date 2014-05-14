@@ -10,7 +10,7 @@
 Summary:	PHP Secure Communications Library
 Name:		php-%{pkgname}
 Version:	0.3.5
-Release:	1
+Release:	2
 License:	MIT
 Group:		Development/Languages/PHP
 Source0:	http://downloads.sourceforge.net/phpseclib/phpseclib%{version}.zip
@@ -23,11 +23,11 @@ BuildRequires:	unzip
 Patch0:		includes.patch
 Requires:	php(bcmath)
 Requires:	php(core) >= %{php_min_version}
+Requires:	php(date)
 Requires:	php(hash)
 Requires:	php(openssl)
 Requires:	php(pcre)
 Requires:	php(xml)
-Requires:	php-date
 Requires:	php-pear
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
