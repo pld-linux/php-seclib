@@ -6,7 +6,6 @@
 # - patch location of CRYPT_RSA_OPENSSL_CONFIG (currently not installed)
 %define		pkgname	seclib
 %define		php_min_version 5.2.0
-%include	/usr/lib/rpm/macros.php
 Summary:	PHP Secure Communications Library
 Name:		php-%{pkgname}
 Version:	0.3.5
