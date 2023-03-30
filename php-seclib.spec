@@ -9,7 +9,7 @@
 Summary:	PHP Secure Communications Library
 Name:		php-%{pkgname}
 Version:	0.3.5
-Release:	2
+Release:	3
 License:	MIT
 Group:		Development/Languages/PHP
 Source0:	http://downloads.sourceforge.net/phpseclib/phpseclib%{version}.zip
@@ -28,6 +28,9 @@ Requires:	php(openssl)
 Requires:	php(pcre)
 Requires:	php(xml)
 Requires:	php-pear
+Obsoletes:	php-pear-Crypt_Blowfish <= 1.1.0-0.RC2.2
+Obsoletes:	php-pear-Crypt_RSA <= 1.2.1-3
+Obsoletes:	php-pear-Math_BigInteger <= 1.0.3-1
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
