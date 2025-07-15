@@ -42,7 +42,7 @@ AES, SSH-1, SSH-2, and SFTP.
 %prep
 %setup -qc
 %undos -f php
-%patch0 -p1
+%patch -P0 -p1
 
 %install
 rm -rf $RPM_BUILD_ROOT
